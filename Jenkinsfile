@@ -1,1 +1,14 @@
-echo "Raed "
+pipeline {
+    agent any
+    
+    stages {
+        stage('msg'){
+            steps{
+                echo "Raed"
+                echo "Test"
+            }
+        }
+      
+    }
+  
+}
