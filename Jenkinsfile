@@ -1,1 +1,1 @@
-echo "Raedd"
+echo "Raed"
