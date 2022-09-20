@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('msg'){
+            steps{
+                echo "RaedJr"
+                
+            }
+        }
+        
+          stage("sonarquebe analyse"){
+            steps{
+                bat 'mvn sonar:sonar'
+            }
+        }
+      
+    }
+  
+}
