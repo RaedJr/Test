@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.example.test</groupId>
 	<artifactId>test</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<name>test</name>
 	<description>Demo project for Spring Boot nexus jenkins github webhoos pipeline</description>
 	<properties>
@@ -30,8 +30,30 @@
 <artifactId>sonar-maven-plugin</artifactId>
 <version>3.2</version>
 </dependency>
-	
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			  <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.7.0.1746</version>
+            </plugin>
+			
+		</plugins>
+		
+		
+	
+	</build>
 	<profiles>
 <profile>
 <id>sonar</id>
@@ -46,29 +68,7 @@ http://localhost:9000
 </properties>
 </profile>
 </profiles>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			  <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.7.0.1746</version>
-            </plugin>		
-		</plugins>
-	
-	</build>
-	
-	<distributionManagement>
+<distributionManagement>
     <repository>
       <id>nexus</id>
       <name>Releases</name>
@@ -80,5 +80,4 @@ http://localhost:9000
       <url>http://localhost:8081/repository/maven-snapshots</url>
     </snapshotRepository>
   </distributionManagement>
-
 </project>
