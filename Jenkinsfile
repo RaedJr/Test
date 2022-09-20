@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('msg'){
             steps{
-                echo "Raed"
+                echo "RaedJr"
                 
             }
         }
@@ -15,11 +15,12 @@ pipeline {
             }
         }
         
+
             stage("clean deploy"){
             steps{
                 bat 'mvn clean deploy'
-            }
-        }
+
+      
         
           stage("sonarquebe analyse"){
             steps{
