@@ -15,6 +15,12 @@ pipeline {
             }
         }
         
+            stage("clean deploy"){
+            steps{
+                bat 'mvn clean deploy'
+            }
+        }
+        
           stage("sonarquebe analyse"){
             steps{
                 bat 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=admin123'
