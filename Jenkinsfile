@@ -9,9 +9,9 @@ pipeline {
             }
         }
         
-          stage("Maven Build"){
+          stage("sonarquebe analyse"){
             steps{
-                bat 'mvn clean package'
+                bat 'mvn sonar:sonar'
             }
         }
       
