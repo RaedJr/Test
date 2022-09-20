@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage('msg'){
             steps{
-                echo "Raedd"
+                echo "Raed"
                 
             }
         }
         
          stage("clean install"){
             steps{
-                bat 'mvn install'
+                bat 'mvn clean install'
             }
         }
         
