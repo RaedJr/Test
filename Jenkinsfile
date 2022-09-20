@@ -9,12 +9,11 @@ pipeline {
             }
         }
         
-          stage('sonarquebe analyze'){
-            steps{
-                sh 'mvn sonar:sonar'
-                
+         stage ('Build') {
+            steps {
+                sh 'mvn -Dmaven.test.failure.ignore=true install' 
             }
-        }
+         }
       
     }
   
