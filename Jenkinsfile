@@ -8,6 +8,13 @@ pipeline {
                 
             }
         }
+        
+          stage('sonarquebe analyze'){
+            steps{
+                sh 'mvn sonar:sonar'
+                
+            }
+        }
       
     }
   
