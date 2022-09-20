@@ -25,11 +25,7 @@ pipeline {
 
       
         
-          stage("sonarquebe analyse"){
-            steps{
-                bat 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=admin123'
-            }
-        }
+         
       
     }
   
