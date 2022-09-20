@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('msg'){
             steps{
-                echo "Raed"
+                echo "Raedd"
                 
             }
         }
@@ -18,7 +18,7 @@ pipeline {
 
             stage("clean deploy"){
             steps{
-                bat 'mvn deploy'
+                bat 'mvn clean deploy'
             }
             }
 
