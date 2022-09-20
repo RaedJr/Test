@@ -14,11 +14,7 @@
 	<description>Demo project for Spring Boot nexus jenkins github webhoos pipeline</description>
 	<properties>
 		<java.version>17</java.version>
-		
-	
-
 	</properties>
-	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -50,25 +46,6 @@ http://localhost:9000
 </properties>
 </profile>
 </profiles>
-
-
-	<!-- 
-	<distributionManagement>
-		<repository>
-			<id>nexus</id>
-			<name>Releases</name>
-			<url>http://localhost:8081/repository/maven-releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>nexus</id>
-			<name>Snapshot</name>
-			<url>http://localhost:8081/repository/maven-snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
-	
-	-->
-	 		
-
 	<build>
 		<plugins>
 			<plugin>
@@ -86,10 +63,7 @@ http://localhost:9000
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.7.0.1746</version>
-            </plugin>
-            
-
-			
+            </plugin>		
 		</plugins>
 	
 	</build>
