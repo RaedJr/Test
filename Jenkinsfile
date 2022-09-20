@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('msg'){
             steps{
-                echo "Raed"
+                echo "raed"
                 
             }
         }
