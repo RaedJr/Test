@@ -18,7 +18,7 @@ pipeline {
 
             stage("clean deploy"){
             steps{
-                bat 'mvn deploy'
+                bat 'mvn deploy -X'
             }
             }
 
