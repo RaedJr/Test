@@ -20,6 +20,8 @@ pipeline {
             steps{
                 bat 'mvn clean deploy'
 
+}
+}
       
         
           stage("sonarquebe analyse"){
